@@ -3,7 +3,7 @@ import requests
 def get_pokemonts(url='https://pokeapi.co/api/v2/pokemon-form/', offset=0):
     # Definir una variable en caso contrario
     args = {'offset': offset} if offset else {}
-    response = requests.get(url)
+    response = requests.get(url, params=args)
 
     # Enlistarlos
     if response.status_code == 200:
@@ -18,9 +18,15 @@ def get_pokemonts(url='https://pokeapi.co/api/v2/pokemon-form/', offset=0):
                 name = pokemon['name']
                 print(name)
 
-        next = input("Continuar listado? [Y/N] ").lower() #Lower = pone las letraes en minusculas
+        next = input("Continuar listado? [Y/N] ").lower() #Lower = pone las letras en minusculas
         if next == 'y':
             get_pokemonts(offset=offset+20)
+
+
+# def get_pokemon(url='https://pokeapi.co/api/v2/ability/',name=''):
+#     args = {'name': name}
+#     response = requests.get(url, params=args)
+
 
 if __name__ == '__main__':
     url = 'https://pokeapi.co/api/v2/pokemon-form/'
