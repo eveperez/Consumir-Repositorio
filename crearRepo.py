@@ -11,11 +11,11 @@ if __name__ == '__main__':
     print(f"Client ID: {client_id}")
     print(f"Client Secret: {client_secret}")
 
-    # https://github.com/login/oauth/authorize?client_id=Ov23liPI6WxSMWMDp0cv&scope=repo
+    # https://github.com/login/oauth/authorize?client_id=''&scope=repo
 
-    code = '45ae90306c5a35da4eeb'
+    code = ''
     # Permite obtener casi toda la informacion del usuario
-    access_token = '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'
+    access_token = ''
 
     url = 'https://api.github.com/user/repos'
     payload = {'name': 'git_api_cf_comunidad'}
