@@ -10,9 +10,9 @@ client_secret = os.getenv('client_secret')
 print(f"Client ID: {client_id}")
 print(f"Client Secret: {client_secret}")
 
-# https://github.com/login/oauth/authorize?client_id=Ov23liPI6WxSMWMDp0cv&scope=respo
+# https://github.com/login/oauth/authorize?client_id=Ov23liPI6WxSMWMDp0cv&scope=repo
 
-code = '491ac0b9f7cbf449ba7b'
+code = '45ae90306c5a35da4eeb'
 # Permite obtener casi toda la informacion del usuario
 access_token = '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'
 
@@ -27,4 +27,7 @@ if __name__ == '__main__':
         response_json = response.json()
         access_token = response_json['access_token']
         print(access_token)
+    else:
+        print(response.content)
+        print(response.text)
 
